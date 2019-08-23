@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8-ball</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball">
+            <img src="8ball.png" id="ball" alt="">
+            <p id="answer">Let me ask Moirai</p>
+        </div>
+        <div class="form">
+            <input id="name" type="text" value="" placeholder="Your Name">
+            <input id="question" type="text" value="" placeholder="Ask me...">
+            <button class="btn btn-primary" id="button">Push Me</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Question</th>
+                    <th scope="col">Answer</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+        </table>
+        <table class="table upmargin" id="history">
+
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
