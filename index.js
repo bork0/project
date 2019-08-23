@@ -109,24 +109,6 @@ function position() {
 
 let resultsArray = [];
 
-// function createTable() {
-//     let currentAnswer = randomWords(answersArray);
-//     answer.innerHTML = currentAnswer;
-//     position();
-//     let now = new Date;
-//     let currentTime = `${now.getHours()}: ${now.getMinutes()}: ${now.getSeconds()}`;
-//     resultsArray.push(name.value, question.value, currentAnswer, currentTime);
-//     let tableBody = document.createElement('tbody');
-//     let tableRow = document.createElement('tr');
-//     let htmlTable = '';
-//     resultsArray.forEach(item =>
-//         htmlTable += `<td>${item}</td>`);
-//     tableRow.innerHTML = htmlTable;
-//     tableBody.appendChild(tableRow);
-//     history.appendChild(tableBody)
-//     console.log(resultsArray);
-// };
-
 function createTable() {
     let currentAnswer = randomWords(answersArray);
     answer.innerHTML = currentAnswer;
@@ -151,7 +133,6 @@ function createTable() {
             safeIndex += b * (b + 1) / 2;
             if (tableRow.rowIndex !== safeIndex) {
                 history.deleteRow(tableRow.rowIndex);
-                console.log(typeof tableRow.rowIndex);
             };
         };
     });
