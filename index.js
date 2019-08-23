@@ -71,21 +71,6 @@ function checkMistake() {
         name.value = '';
         question.value = '';
         answer.innerHTML = 'Try again';
-    } else if ((question.value !== '' || isNaN(question.value)) && (name.value !== '' || isNaN(name.value))) {
-        question.style.borderColor = 'initial';
-        name.style.borderColor = 'initial';
-        question.value = '';
-        name.value = '';
-        question.placeholder = 'Ask me...';
-        name.placeholder = 'Your Name';
-    } else if ((name.value === '' || !isNaN(name.value)) && (question.value !== '' || isNaN(question.value))) {
-        name.style.borderColor = 'red';
-        question.style.borderColor = 'initial';
-        name.placeholder = 'Who are you?';
-        question.placeholder = 'Ask me...'
-        name.value = '';
-        question.value = '';
-        answer.innerHTML = 'Try again';
     } else if ((question.value === '' || !isNaN(question.value)) && (name.value !== '' || isNaN(name.value))) {
         question.style.borderColor = 'red';
         name.style.borderColor = 'initial';
@@ -94,6 +79,21 @@ function checkMistake() {
         question.value = '';
         name.value = '';
         answer.innerHTML = 'Try again';
+    } else if ((name.value === '' || !isNaN(name.value)) && (question.value !== '' || isNaN(question.value))) {
+        name.style.borderColor = 'red';
+        question.style.borderColor = 'initial';
+        name.placeholder = 'Who are you?';
+        question.placeholder = 'Ask me...'
+        name.value = '';
+        question.value = '';
+        answer.innerHTML = 'Try again';
+    } else if ((question.value !== '' || isNaN(question.value)) && (name.value !== '' || isNaN(name.value))) {
+        question.style.borderColor = 'initial';
+        name.style.borderColor = 'initial';
+        question.value = '';
+        name.value = '';
+        question.placeholder = 'Ask me...';
+        name.placeholder = 'Your Name';
     }
 };
 
